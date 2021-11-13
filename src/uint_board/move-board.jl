@@ -9,7 +9,7 @@ end
 
 """make_one_move on game board"""
 function move!(board, dir::Dirs)::Tuple{Int, Bool}
-    move!(board, Val(dir))
+    return move!(board, Val(dir))
 end
 
 function move!(board, ::Val{left})
@@ -20,7 +20,7 @@ function move!(board, ::Val{left})
         tot_pts += pts
         any_updated |= updated
     end
-    tot_pts, any_updated
+    return (tot_pts, any_updated)
 end
 
 function move!(board, ::Val{right})
@@ -31,7 +31,7 @@ function move!(board, ::Val{right})
         tot_pts += pts
         any_updated |= updated
     end
-    tot_pts, any_updated
+    return (tot_pts, any_updated)
 end
 
 function move!(board, ::Val{up})
@@ -42,7 +42,7 @@ function move!(board, ::Val{up})
         tot_pts += pts
         any_updated |= updated
     end
-    tot_pts, any_updated
+    return (tot_pts, any_updated)
 end
 
 function move!(board, ::Val{down})
@@ -53,5 +53,5 @@ function move!(board, ::Val{down})
         tot_pts += pts
         any_updated |= updated
     end
-    tot_pts, any_updated
+    return (tot_pts, any_updated)
 end
