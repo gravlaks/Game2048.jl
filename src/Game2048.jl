@@ -4,8 +4,8 @@ export Dirs, left, right, up, down, move!, move
 
 @enum Dirs left right up down
 
-include("uint_board/move-up.jl")
-# include("gamesim/move-board.jl")
+# include("uint_board/move-up.jl")
+include("uint_board/move-board.jl")
 # include("gamesim/sim-game.jl")
 # include("gamesim/play_game_with_policy.jl")
 
