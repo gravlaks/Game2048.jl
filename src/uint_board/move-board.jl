@@ -4,7 +4,7 @@ using Base.Threads: @threads
 
 function move(board, dir)
     copy_board = deepcopy(board)
-    copy_board, move!(copy_board, dir)
+    return (copy_board, move!(copy_board, dir))
 end
 
 """make_one_move on game board"""
